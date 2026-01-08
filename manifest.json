@@ -1,11 +1,22 @@
 {
   "manifest_version": 3,
-  "name": "Hello World Overlayer",
+  "name": "Live Audio Transcriber",
   "version": "1.0",
-  "permissions": ["storage", "activeTab"],
+  "description": "Transcribe audio from any tab with on-screen display",
+  "permissions": [
+    "tabCapture",
+    "offscreen",
+    "storage",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": ["<all_urls>"],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Hello World Overlayer"
+    "default_title": "Live Transcriber"
+  },
+  "background": {
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
