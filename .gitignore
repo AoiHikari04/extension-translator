@@ -1,0 +1,7 @@
+
+# Ignore Whisper model files (large ONNX files)
+translator/assets/model/
+translator/assets/onnx-wasm/
+*.onnx
+*.bin
+
